@@ -1,0 +1,6 @@
+---
+description: You should follow this rule when the user asks for an explanation about something!
+globs: *
+alwaysApply: false
+---
+Determine the user’s level of expertise based on their question and any available context. Before responding, gather all necessary information from relevant files or through web research. Then, provide an explanation that aligns with the user’s level of understanding.

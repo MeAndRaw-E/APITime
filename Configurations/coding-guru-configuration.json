@@ -1,0 +1,7 @@
+{
+    "directory_structure_generation": {
+        "directory_to_examine": "../",
+        "excluded_items": [],
+        "output_path": "../Documentation/APITime_Package_Directory_Structure.md"
+    }
+}

@@ -1,0 +1,50 @@
+---
+description: You must follow this rule when you are organizing a page!
+globs: 
+alwaysApply: false
+---
+**Tao-Inspired SwiftUI Page Organization**
+
+Organize SwiftUI Pages and their corresponding style files with harmony, clarity, and purpose to create a balanced, maintainable codebase reflecting natural structure.
+
+### I. Page Structure
+
+1. **Protocol Compliance:**
+   * Implement required `mainContent` property returning your content view. This is used in place of the body property useed in standard views.
+
+2. **Core Architecture:**
+   * Make `mainContent` the focal point of your design
+   * Extract view components into an extension of the page.
+
+3. **Extension Organization:**
+   * Primary struct: Contains essential state and the `mainContent` property
+   * Component extension: Houses view components
+
+### II. Style File Structure
+
+1. **File Organization:**
+   * Create a matching styles file for each Page (e.g., `ViewRecipesPageStyles.swift`)
+   * Begin with an extension of your Page type
+   * Create a nested `Styles` struct to contain all styling logic
+
+2. **Component-to-Style Mirroring:**
+   * Create a struct in the `Styles` struct called `Shared` which will container styles used more than once in the page
+   * Create a struct in the `Styles` struct called `MainContent` which stores the modifiers applied to code within the mainContent property
+   * For each component in the extension create a corresponding struct in the `Styles` struct named the same but with proper casing.
+
+### III. Harmony Between Page and Style
+
+1. **Component Reflection:**
+   * When you create `recipeListSection` in your Page's view components extension, create `Styles.RecipeListSection` in styles
+   * Maintain this mirroring relationship throughout development
+
+2. **Style Application:**
+   * Only do inline styling in the page if there is one modifier to apply. If more than one modifier is applied move it to the dedicated styles file.
+
+3. **Consistent Evolution:**
+   * Update styles when you modify Page components
+   * Add new style structs when creating new Page components
+   * Remove style structs when removing Page components
+
+4. **Naming Conventions:**
+   * Page structs: Use names ending with "Page" (e.g., `ViewRecipesPage`)
