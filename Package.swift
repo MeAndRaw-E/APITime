@@ -15,8 +15,8 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/MeAndRaw-E/LoggingTime", branch: "master"),
-        .package(url: "https://github.com/MeAndRaw-E/Swifter", branch: "master"),
+        .package(url: "https://github.com/MeAndRaw-E/LoggingTime", from: "1.0.0"),
+        .package(url: "https://github.com/MeAndRaw-E/Swifter", from: "1.0.0"),
     ],
     targets: [
         .target(
